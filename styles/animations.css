@@ -1,6 +1,7 @@
 /* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно,
+чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
@@ -12,3 +13,66 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* Анимация стрелки в меню выбора темы */
+
+@keyframes animation-arrow {
+
+  from {
+    left: -20px;
+  }
+
+  to {
+    left: -16px;
+  }
+}
+
+/* Анимация кнопки - сердце */
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation-name: heart-scale;
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes heart-scale {
+
+  from {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.5;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+/* Анимация - искры */
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation-name: heart-sparks;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes heart-sparks {
+
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
