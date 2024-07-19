@@ -31,13 +31,13 @@
 
 .like-icon.is-liked .heart {
   transform-origin: center;
-  animation-name: heart-scale;
+  animation-name: animation-heart;
   animation-duration: 0.3s;
   animation-delay: 0.1s;
   animation-timing-function: ease-in;
 }
 
-@keyframes heart-scale {
+@keyframes animation-heart {
 
   from {
     scale: 1;
@@ -56,13 +56,13 @@
 
 .like-icon.is-liked .sparks {
   transform-origin: center;
-  animation-name: heart-sparks;
+  animation-name: animation-sparks;
   animation-duration: 0.3s;
   animation-delay: 0.3s;
   animation-timing-function: ease-in;
 }
 
-@keyframes heart-sparks {
+@keyframes animation-sparks {
 
   from {
     opacity: 0;

@@ -199,6 +199,19 @@
   object-position: center;
 }
 
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin-block: 25px;
+}
+
+.card__text {
+  margin-inline: 25px;
+}
+
+/* 8 фильтров */
+
 .image-filter-brightness {
   filter: brightness(200%);
 }
@@ -228,18 +241,7 @@
 }
 
 .image-filter-multi {
-  filter: sepia(1) contrast(2) brightness(200%);;
-}
-
-.card__description {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  margin-block: 25px;
-}
-
-.card__text {
-  margin-inline: 25px;
+  filter: sepia(80%) blur(0.3rem) brightness(200%);;
 }
 
 /* Кнопки */
@@ -278,6 +280,11 @@
 .card__like-button {
   width: 130px;
   padding-block: 12px;
+}
+
+.button__text,
+.floppy-icon {
+  mix-blend-mode: difference;
 }
 
 .decorated-button {
@@ -373,6 +380,8 @@
   opacity: 0;
 }
 
+/* всплывающее окно диалога */
+
 .dialog {
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
@@ -418,11 +427,6 @@
 }
 
 /* Кнопка с дискетой */
-
-.button__text,
-.floppy-icon {
-  mix-blend-mode: difference;
-}
 
 .floppy-icon {
   inline-size: 21px;
