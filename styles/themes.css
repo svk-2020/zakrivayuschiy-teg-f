@@ -10,7 +10,7 @@
   --color-accent: rgb(0 0 0);
   --color-accent-transparent: rgb(0 0 0 / 0.6);
   --color-shadow: rgb(255 255 255 / 0.5);
-  --color-button-text: #fff;
+  --color-accent-button: #fff;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --gradient-bg:
@@ -24,7 +24,7 @@
   --color-accent: rgb(0 204 20);
   --color-accent-transparent: rgb(0 204 20 / 0.6);
   --color-shadow: rgb(0 0 0 / 0.5);
-  --color-button-text: rgb(0 204 20);
+  --color-accent-button: rgb(0 204 20);
   --font-weight-normal: 465;
   --font-weight-bold: 785;
   --gradient-bg:
@@ -40,7 +40,7 @@
     --color-accent: rgb(0 0 0);
     --color-accent-transparent: rgb(0 0 0 / 0.6);
     --color-shadow: rgb(255 255 255 / 0.5);
-    --color-button-text: #fff;
+    --color-accent-button: #fff;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --gradient-bg:

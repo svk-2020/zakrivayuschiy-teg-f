@@ -17,7 +17,7 @@
 
 .page {
   width: 100%;
-  max-width: 700px;
+  max-inline-size: 700px;
   margin: auto;
   font-family: var(--font-main), sans-serif;
   font-size: 18px;
@@ -31,18 +31,14 @@
   min-block-size: 100dvb;
 }
 
-/* Header & Footer */
+/* Header */
 
-.header,
-.footer {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
-}
-
-.header {
   margin: 100px 0;
   text-transform: uppercase;
   border: 2px solid var(--color-accent);
@@ -58,11 +54,6 @@
 .header-title {
   margin-block-end: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-}
-
-.footer {
-  flex-shrink: 0;
-  margin: 52px auto 100px;
 }
 
 /* Header: меню выбора цветовой темы  */
@@ -167,8 +158,8 @@
 .image__label {
   position: absolute;
   z-index: 1;
-  margin-inline-end: 25px;
-  margin-block-start: 25px;
+  top: 25px;
+  right: 25px;
   color: var(--color-accent);
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
@@ -254,20 +245,25 @@
   font-size: 14px;
 }
 
-.card__like-button,
-.footer__button,
-.dialog__button {
+.action__button {
   position: relative;
   border: none;
   outline: 2px solid var(--color-accent);
-  color: var(--color-button-text);
+  color: var(--color-accent-button);
   line-height: 90%;
   overflow: hidden;
   background-color: transparent;
   cursor: pointer;
 }
 
-.footer__button {
+.card__like-button {
+  width: 130px;
+  padding-block: 12px;
+}
+
+.save__button {
+  font-family: var(--font-accent), fantasy;
+  font-size: 14px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -275,11 +271,8 @@
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 15px;
   background-color: var(--color-bg);
-}
-
-.card__like-button {
-  width: 130px;
-  padding-block: 12px;
+  flex-shrink: 0;
+  margin: 3px auto 100px;
 }
 
 .button__text,
@@ -297,7 +290,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-button-text);
+  background-color: var(--color-accent-button);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -324,60 +317,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--color-accent);
-}
-
-.core {
-  fill: var(--color-bg);
-  transition: fill 0.2s 0.2s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--color-accent);
-  transition: fill 0.2s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--color-heart);
-  transition: fill 0.2s;
-}
-
-.main-body {
-  fill: var(--color-bg);
-  transition: fill 0.2s;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--color-accent);
-  transition: fill 0.2s 0.3s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--color-heart);
-  transition: fill 0.2s 0.3s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--color-heart);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--color-heart);
-  transition: fill 0.3s 0.3s;
-}
-
-.contour {
-  fill: var(--color-accent);
-  transition: fill 0.1s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--color-heart);
-  transition: fill 0.3s 0.6s;
-}
-
-.sparks {
-  opacity: 0;
 }
 
 /* всплывающее окно диалога */
@@ -420,6 +359,7 @@
   width: 100%;
   padding-block: 12px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .dialog::backdrop {
@@ -435,7 +375,7 @@
 
 @media (width <= 375px) {
 
-  .footer__button {
+  .save__button {
     flex-direction: column;
   }
 

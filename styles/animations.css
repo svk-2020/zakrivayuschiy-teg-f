@@ -29,14 +29,6 @@
 
 /* Анимация кнопки - сердце */
 
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation-name: animation-heart;
-  animation-duration: 0.3s;
-  animation-delay: 0.1s;
-  animation-timing-function: ease-in;
-}
-
 @keyframes animation-heart {
 
   from {
@@ -54,14 +46,6 @@
 
 /* Анимация - искры */
 
-.like-icon.is-liked .sparks {
-  transform-origin: center;
-  animation-name: animation-sparks;
-  animation-duration: 0.3s;
-  animation-delay: 0.3s;
-  animation-timing-function: ease-in;
-}
-
 @keyframes animation-sparks {
 
   from {
@@ -75,4 +59,82 @@
   to {
     opacity: 0;
   }
+}
+
+.contour {
+  fill: var(--color-accent);
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: var(--color-bg);
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: var(--color-bg);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* :hover */
+
+.card__icon-button:hover .core {
+  fill: var(--color-accent);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--color-accent);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* :active */
+
+.card__icon-button:active .core {
+  fill: var(--color-heart);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Клик по иконке is-liked */
+
+.like-icon.is-liked .core {
+  fill: var(--color-heart);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation-name: animation-heart;
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation-name: animation-sparks;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
 }
