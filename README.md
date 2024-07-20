@@ -12,7 +12,8 @@ HTML, CSS
 ## Ссылка на репозитарий:
 https://github.com/svk-2020/zakrivayuschiy-teg-f.git
 
-
+## Ссылка на gh-pages:
+https://svk-2020.github.io/zakrivayuschiy-teg-f/
 
 ### Автор проекта:
 
